@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, Качок!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="intro-overlay">
+        <div class="intro-text">С ДНЁМ РОЖДЕНИЯ!</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">С ДНЁМ РОЖДЕНИЯ, КАЧОК!</h1>
+            <p class="subtitle">Ты прокачался на новый уровень!</p>
+        </div>
+        
+        <div class="content">
+            <div class="photo-section">
+                <div class="photo-frame">
+                    <img src="img/мужик.png" alt="Фото качка" class="photo" id="photo">
+                </div>
+                
+                <div class="gym-toys">
+                    <div class="toy" style="--delay: 0" onclick="changeBackground()">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="toy" style="--delay: 1" onclick="changePhoto()">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="toy" style="--delay: 2" onclick="addMuscles()">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toy" style="--delay: 3" onclick="playSound()">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="message">
+                    <p><i class="fas fa-dumbbell"></i> Поздравляю с днём рождения, настоящий качок!</p>
+                    <p><i class="fas fa-fire"></i> Пусть твои бицепсы растут, а жим лёжа бьёт все рекорды!</p>
+                    <p><i class="fas fa-trophy"></i> Желаю железной мотивации и стальных мышц!</p>
+                    <p><i class="fas fa-shield-alt"></i> Пусть белок всегда будет с тобой, а протеиновые коктейли никогда не заканчиваются!</p>
+                </div>
+                
+                <div class="counter">
+                    <span>Ты прокачался уже на </span>
+                    <span id="age">17</span>
+                    <span> лет!</span>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-title">Уровень крутости:</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="coolness-bar">
+                            <div class="progress-text">99%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" id="confettiBtn" onclick="startConfetti()">
+                <i class="fas fa-fire"></i> Запустить фейерверк
+            </button>
+            <button class="btn" onclick="changeText()">
+                <i class="fas fa-magic"></i> Сменить стиль текста
+            </button>
+            <button class="btn" onclick="pumpIt()">
+                <i class="fas fa-heart"></i> Накачать мышцы!
+            </button>
+        </div>
+        
+        <div class="footer">
+            <p>Создано с 💙 и протеином для самого крутого качка</p>
+        </div>
+    </div>
+
+    <canvas id="confetti" class="confetti"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>

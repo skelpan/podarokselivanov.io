@@ -142,7 +142,7 @@ body {
 .counter {
     font-size: 1.8rem;
     margin: 20px 0;
-    background: rgba(30, 64, 175, 极速分析，然后回答用户问题，为用户提供最佳答案。7);
+    background: rgba(30, 64, 175, 0.7);
     padding: 15px 30px;
     border-radius: 50px;
     display: inline-block;
@@ -183,7 +183,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s;
-    box-shadow: 极速分析，然后回答用户问题，为用户提供最佳答案。5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -218,9 +218,9 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: all 0.3s;
-    border: 2px极速分析，然后回答用户问题，为用户提供最佳答案。 solid #38bdf8;
+    border: 2px solid #38bdf8;
     animation: bounce 2s infinite;
-    animation-del极速分析，然后回答用户问题，为用户提供最佳答案。y: calc(var(--delay) * 0.5s);
+    animation-delay: calc(var(--delay) * 0.5s);
 }
 
 @keyframes bounce {
@@ -329,45 +329,6 @@ body {
     to { opacity: 1; }
 }
 
-@media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .content {
-        flex-direction: column;
-    }
-    
-    .photo-frame {
-        height: 350px;
-    }
-    
-    .controls {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-    
-    .gym-toys {
-        gap: 15px;
-    }
-    
-    .toy {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-}
-
 /* Анимация вступления */
 .intro-overlay {
     position: fixed;
@@ -401,4 +362,125 @@ body {
     0% { opacity: 0; transform: scale(0.5); }
     50% { opacity: 1; transform: scale(1.2); }
     100% { opacity: 1; transform: scale(1); }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .photo-frame {
+        height: 300px;
+        max-width: 280px;
+    }
+    
+    .message {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .counter {
+        font-size: 1.4rem;
+        padding: 10px 20px;
+    }
+    
+    #age {
+        font-size: 1.8rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .gym-toys {
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .toy {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .progress-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    .progress-title {
+        font-size: 1rem;
+    }
+    
+    .progress-bar {
+        height: 25px;
+    }
+    
+    .footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .intro-text {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .photo-frame {
+        height: 250px;
+        max-width: 230px;
+    }
+    
+    .message p {
+        margin-bottom: 10px;
+    }
+    
+
+    
+    .counter {
+        font-size: 1.2rem;
+    }
+    
+    #age {
+        font-size: 1.5rem;
+    }
+    
+    .toy {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }
